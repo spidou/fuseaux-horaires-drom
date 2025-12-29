@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fuseaux horaires DROM</title>
+
+  <style>
+    .zone {
+  
+}
+
+.zone .name {
+  font-weight: bold;
+}
+
+.zone .timezone {
+  font-style: italic;
+}
+
+.zone .clock {
+  display: block;
+}
+  </style>
+
+  
+</head>
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/locale/fr.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.6.0/moment-timezone-with-data.min.js"></script>
+
+<p class="zone" id="guadeloupe">
+  <span class="name">Guadeloupe (971)</span>
+  <span class="timezone">GMT -4</span>
+  <span class="clock"></span>
+</p>
+<p class="zone" id="martinique">
+  <span class="name">Martinique (972)</span>
+  <span class="timezone">GMT -4</span>
+  <span class="clock"></span>
+</p>
+<p class="zone" id="guyanne">
+  <span class="name">Guyanne (973)</span>
+  <span class="timezone">GMT -4</span>
+  <span class="clock"></span>
+</p>
+<p class="zone" id="miquelon">
+  <span class="name">Saint-Pierre et Miquelon (975)</span>
+  <span class="timezone">GMT -3</span>
+  <span class="clock"></span>
+</p>
+<p class="zone" id="paris">
+  <span class="name">Paris</span>
+  <span class="timezone">GMT +1</span>
+  <span class="clock"></span>
+</p>
+<p class="zone" id="mayotte">
+  <span class="name">Mayotte (976)</span>
+  <span class="timezone">GMT +3</span>
+  <span class="clock"></span>
+</p>
+<p class="zone" id="reunion">
+  <span class="name">La Réunion (974)</span>
+  <span class="timezone">GMT +4</span>
+  <span class="clock"></span>
+</p>
+
+  <script>
+    var moment = moment().locale('fr')
+
+var reunion = moment.tz('Indian/Reunion').format('LLL')
+var mayotte = moment.tz('Indian/Mayotte').format("LLLL")
+var guadeloupe = moment.tz('America/Guadeloupe').format("LLLL")
+var martinique = moment.tz('America/Martinique').format("LLLL")
+var guyanne = moment.tz('America/Guyana').format("LLLL")
+var miquelon = moment.tz('America/Miquelon').format("LLLL")
+var paris = moment.tz('Europe/Paris').format("LLLL")
+
+$('#reunion .clock').text(reunion)
+$('#mayotte .clock').text(mayotte)
+$('#guadeloupe .clock').text(guadeloupe)
+$('#martinique .clock').text(martinique)
+$('#guyanne .clock').text(guyanne)
+$('#miquelon .clock').text(miquelon)
+$('#paris .clock').text(paris)
+  </script>
+</body>
+</html>
