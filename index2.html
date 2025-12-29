@@ -8,11 +8,7 @@
   <title>Fuseaux horaires DROM</title>
 
   <style>
-    .zone {
-  
-}
-
-.zone .name {
+    .zone .name {
   font-weight: bold;
 }
 
@@ -43,13 +39,13 @@
   <span class="timezone">GMT -4</span>
   <span class="clock"></span>
 </p>
-<p class="zone" id="guyanne">
-  <span class="name">Guyanne (973)</span>
+<p class="zone" id="guyane">
+  <span class="name">Guyane (973)</span>
   <span class="timezone">GMT -4</span>
   <span class="clock"></span>
 </p>
 <p class="zone" id="miquelon">
-  <span class="name">Saint-Pierre et Miquelon (975)</span>
+  <span class="name">Saint-Pierre-et-Miquelon (975)</span>
   <span class="timezone">GMT -3</span>
   <span class="clock"></span>
 </p>
@@ -72,11 +68,11 @@
   <script>
     var moment = moment().locale('fr')
 
-var reunion = moment.tz('Indian/Reunion').format('LLL')
+var reunion = moment.tz('Indian/Reunion').format('LLLL')
 var mayotte = moment.tz('Indian/Mayotte').format("LLLL")
 var guadeloupe = moment.tz('America/Guadeloupe').format("LLLL")
 var martinique = moment.tz('America/Martinique').format("LLLL")
-var guyanne = moment.tz('America/Guyana').format("LLLL")
+var guyane = moment.tz('America/Guyana').format("LLLL")
 var miquelon = moment.tz('America/Miquelon').format("LLLL")
 var paris = moment.tz('Europe/Paris').format("LLLL")
 
@@ -84,7 +80,7 @@ $('#reunion .clock').text(reunion)
 $('#mayotte .clock').text(mayotte)
 $('#guadeloupe .clock').text(guadeloupe)
 $('#martinique .clock').text(martinique)
-$('#guyanne .clock').text(guyanne)
+$('#guyane .clock').text(guyane)
 $('#miquelon .clock').text(miquelon)
 $('#paris .clock').text(paris)
   </script>
